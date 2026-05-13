@@ -1,0 +1,33 @@
+.git
+.gitignore
+.idea
+.vscode
+.gradle
+build/
+**/build/
+**/.gradle/
+
+# Android 端不需要进 backend 镜像
+CampusCare/
+
+# 后端构建产物
+**/target/
+
+# 上传目录(运行时生成)
+**/uploads/
+
+# 嵌套残留
+campus-care-backend/campus-care-backend/
+
+# 日志 / 临时
+*.log
+**/*.log
+
+# 文档
+*.md
+LICENSE
+*.txt
+*.pdf
+
+# .git-archived
+**/.git-archived-*/
