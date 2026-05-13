@@ -72,7 +72,7 @@ mvnw.cmd spring-boot:run   # Windows
 | Technician | tech@uni.edu | tech12345 |
 | Student | john@uni.edu | user12345 |
 
-这些密码只用于本地演示，部署到公网前一定要改掉。
+这些密码只用于本地演示.
 
 ## 跑 Android
 
@@ -83,7 +83,7 @@ mvnw.cmd spring-boot:run   # Windows
 - 模拟器连本机后端 → 在 App 内的"服务器设置"页里改成 `http://10.0.2.2:8080/`
 - 真机 → 改成你电脑的 LAN IP，比如 `http://192.168.1.5:8080/`，并确保手机和电脑在同一 WiFi
 
-App 内置了一个服务器设置页（`ServerConfigHelper`），不用改代码也能切。
+App 内置了一个服务器设置页（`ServerConfigHelper`）
 
 ## 上传目录
 
