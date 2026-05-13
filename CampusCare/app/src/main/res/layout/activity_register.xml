@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:paddingTop="56dp"
+        android:paddingBottom="52dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@null"
+            android:src="@android:drawable/ic_menu_revert"
+            android:scaleType="centerInside"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="24dp"
+            android:letterSpacing="-0.02" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join the campus maintenance network"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I AM A"
+            android:textSize="10sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.12"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_tab_container"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tab_student"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Student"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:background="@drawable/bg_tab_active" />
+
+            <TextView
+                android:id="@+id/tab_lecturer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Lecturer"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:background="@null" />
+
+            <TextView
+                android:id="@+id/tab_tech"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Technician"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:background="@null" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FULL NAME"
+            android:textSize="10sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.12"
+            android:textStyle="bold"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_input"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:hint="Your full name"
+            android:textColorHint="@color/text_hint"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CAMPUS EMAIL"
+            android:textSize="10sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.12"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_input"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:hint="Axxxxx@siswa.ukm.edu.my"
+            android:textColorHint="@color/text_hint"
+            android:inputType="textEmailAddress"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:id="@+id/tv_email_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Format: Axxxxx@siswa.ukm.edu.my"
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PASSWORD"
+            android:textSize="10sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.12"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_input"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:hint="Min. 8 characters"
+            android:textColorHint="@color/text_hint"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Create Account"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:background="@drawable/bg_button_primary"
+            android:backgroundTint="@null"
+            android:layout_marginTop="36dp" />
+
+    </LinearLayout>
+</ScrollView>

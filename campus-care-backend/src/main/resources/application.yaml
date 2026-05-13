@@ -1,0 +1,7 @@
+spring:
+  web:
+    resources:
+      static-locations: classpath:/static/, file:./uploads/
+
+app:
+  upload-dir: ./uploads

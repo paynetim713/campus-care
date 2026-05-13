@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/admin_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_media_previous"
+                android:tint="@color/admin_text"
+                android:contentDescription="Back" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADD USER"
+                    android:textSize="11sp"
+                    android:textColor="@color/admin_text_secondary"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create Account"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/admin_text" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ROLE"
+            android:textSize="11sp"
+            android:textColor="@color/admin_text_secondary"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_admin_card"
+            android:padding="4dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/tab_requester"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="REQUESTER"
+                android:textSize="11sp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/bg_tab_active"
+                android:layout_marginEnd="3dp" />
+
+            <TextView
+                android:id="@+id/tab_technician"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="TECHNICIAN"
+                android:textSize="11sp"
+                android:textColor="@color/admin_text_secondary"
+                android:gravity="center"
+                android:layout_marginEnd="3dp" />
+
+            <TextView
+                android:id="@+id/tab_admin_role"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="ADMIN"
+                android:textSize="11sp"
+                android:textColor="@color/admin_text_secondary"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FULL NAME"
+            android:textSize="11sp"
+            android:textColor="@color/admin_text_secondary"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"
+            android:hint="Full name"
+            android:textColorHint="@color/text_hint"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMAIL"
+            android:textSize="11sp"
+            android:textColor="@color/admin_text_secondary"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"
+            android:hint="matric@siswa.ukm.edu.my"
+            android:textColorHint="@color/text_hint"
+            android:inputType="textEmailAddress"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_email_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Format: matric@siswa.ukm.edu.my"
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PASSWORD"
+            android:textSize="11sp"
+            android:textColor="@color/admin_text_secondary"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"
+            android:hint="Minimum 6 characters"
+            android:textColorHint="@color/text_hint"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="32dp" />
+
+        <Button
+            android:id="@+id/btn_create"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="CREATE ACCOUNT"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button_primary"
+            android:backgroundTint="@null" />
+
+    </LinearLayout>
+</ScrollView>

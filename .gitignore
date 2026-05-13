@@ -1,0 +1,62 @@
+# ── 通用 ────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.claude/
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 日志
+*.log
+logs/
+smoke-*.log
+smoke-*.err.log
+
+# ── IDE ───────────────────────────────────────
+.idea/
+*.iml
+.vscode/
+*.sublime-*
+
+# ── Java / Maven ────────────────────────────────
+target/
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+
+# ── Gradle / Android ────────────────────────────
+.gradle/
+build/
+captures/
+local.properties
+*.apk
+*.aab
+*.dex
+*.ap_
+release/
+proguard/
+*.keystore
+*.jks
+
+# Android Studio NDK
+.cxx/
+
+# ── Spring Boot ────────────────────────────────
+HELP.md
+!CampusCare/README.md
+spring-boot-*.jar
+
+# ── 上传目录（运行时）─────────────────────────
+campus-care-backend/uploads/
+campus-care-backend/campus-care-backend/uploads/
+
+# ── 嵌套构建产物 ───────────────────────────────
+campus-care-backend/target/
+campus-care-backend/campus-care-backend/target/
+campus-care-backend/.git-archived-*/

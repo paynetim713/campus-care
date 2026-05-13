@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_media_previous"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Job Detail"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginStart="12dp" />
+
+            <TextView
+                android:id="@+id/tv_ticket_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#----"
+                android:textSize="13sp"
+                android:textColor="@color/primary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_mylocation"
+                android:tint="@color/primary"
+                android:contentDescription="Location" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+                <TextView
+                    android:id="@+id/tv_floor_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="—"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_secondary"
+                    android:letterSpacing="0.06" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PROBLEM DESCRIPTION"
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_evidence_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EVIDENCE PHOTOS"
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_evidence"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginBottom="20dp"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_evidence_photos"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_rating_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="18dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_stars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="★★★★★"
+                android:textSize="14sp"
+                android:textColor="@color/star_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_rating_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_accept_job"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="ACCEPT JOB"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@drawable/bg_button_primary"
+            android:backgroundTint="@null"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPDATE REPAIR STATUS"
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btn_status_new"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="NEW"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:background="@drawable/bg_chip_unselected"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_status_fixing"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="FIXING"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:background="@drawable/bg_chip_unselected"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_status_done"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="DONE"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:background="@drawable/bg_chip_unselected" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXPECTED FINISH"
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_expected_finish"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_input"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/tv_expected_finish"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Tap to select date &amp; time"
+                android:textColorHint="@color/text_hint"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_today"
+                android:tint="@color/primary"
+                android:contentDescription="Pick date and time" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INTERNAL NOTE"
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_note"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"
+            android:hint="Notes for admin..."
+            android:textColorHint="@color/text_hint"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="SAVE CHANGES"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:background="@drawable/bg_button_primary"
+                android:backgroundTint="@null"
+                android:layout_marginEnd="12dp" />
+
+            <ImageButton
+                android:id="@+id/btn_chat"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_teal_card"
+                android:src="@android:drawable/ic_menu_send"
+                android:tint="@color/white"
+                android:padding="14dp"
+                android:contentDescription="Chat" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

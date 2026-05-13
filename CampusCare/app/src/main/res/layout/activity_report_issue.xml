@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report Issue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOCATION"
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/sp_building"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <Spinner
+                android:id="@+id/sp_floor"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input"
+                android:padding="10dp"
+                android:layout_marginEnd="8dp" />
+
+            <Spinner
+                android:id="@+id/sp_room"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CATEGORY"
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.08"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/ll_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView android:id="@+id/chip_electric"
+                    android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="ELECTRIC" android:textSize="11sp"
+                    android:textColor="@color/white" android:background="@drawable/bg_chip_selected"
+                    android:padding="10dp" android:gravity="center" android:layout_marginEnd="8dp" />
+
+                <TextView android:id="@+id/chip_plumbing"
+                    android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="PLUMBING" android:textSize="11sp"
+                    android:textColor="@color/text_secondary" android:background="@drawable/bg_chip_unselected"
+                    android:padding="10dp" android:gravity="center" android:layout_marginEnd="8dp" />
+
+                <TextView android:id="@+id/chip_furniture"
+                    android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="FURNITURE" android:textSize="11sp"
+                    android:textColor="@color/text_secondary" android:background="@drawable/bg_chip_unselected"
+                    android:padding="10dp" android:gravity="center" android:layout_marginEnd="8dp" />
+
+                <TextView android:id="@+id/chip_network"
+                    android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="NETWORK" android:textSize="11sp"
+                    android:textColor="@color/text_secondary" android:background="@drawable/bg_chip_unselected"
+                    android:padding="10dp" android:gravity="center" android:layout_marginEnd="8dp" />
+
+                <TextView android:id="@+id/chip_other"
+                    android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="OTHER" android:textSize="11sp"
+                    android:textColor="@color/text_secondary" android:background="@drawable/bg_chip_unselected"
+                    android:padding="10dp" android:gravity="center" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DETAILS"
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.08"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/et_details"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"
+            android:hint="What's the problem?"
+            android:textColorHint="@color/text_hint"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PHOTO EVIDENCE (Optional, max 3)"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:letterSpacing="0.06" />
+
+            <TextView
+                android:id="@+id/tv_photo_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/3"
+                android:textSize="11sp"
+                android:textColor="@color/primary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_upload"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_input"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@android:drawable/ic_menu_upload"
+                android:tint="@color/text_hint"
+                android:contentDescription="Upload" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Tap to add photo"
+                android:textSize="13sp"
+                android:textColor="@color/text_hint" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_photos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:id="@+id/ll_photo_strip"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Submit Request"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/bg_button_primary"
+            android:backgroundTint="@null"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

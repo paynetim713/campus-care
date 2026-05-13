@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="373dp"
+        android:layout_height="254dp"
+        android:contentDescription="CampusCare Logo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_campus_illustration" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tagline"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:lineSpacingMultiplier="1.4"
+        android:maxWidth="260dp" />
+
+    <Button
+        android:id="@+id/btn_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="@string/sign_in"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_button_primary"
+        android:layout_marginTop="52dp"
+        android:drawableStart="@drawable/ic_login"
+        android:drawablePadding="8dp"
+        app:backgroundTint="@null" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or"
+            android:textSize="12sp"
+            android:textColor="@color/text_hint"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/divider" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_create_account"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="@string/create_account"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_button_secondary"
+        android:layout_marginTop="12dp"
+        app:backgroundTint="@null" />
+
+    <TextView
+        android:id="@+id/tv_server_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Server: http://10.0.2.2:8080/"
+        android:textSize="11sp"
+        android:textColor="@color/text_secondary"
+        android:gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/btn_server_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Server Settings"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:gravity="center"
+        android:padding="6dp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/terms_note"
+        android:textSize="11sp"
+        android:textColor="@color/text_hint"
+        android:gravity="center"
+        android:layout_marginTop="18dp"
+        android:lineSpacingMultiplier="1.5" />
+
+</LinearLayout>

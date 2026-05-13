@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/admin_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="20dp">
+
+            <ImageButton
+                android:id="@+id/btn_menu"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                android:tint="@color/admin_text"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="Menu" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_teal_card"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_menu_manage"
+                android:tint="@color/white"
+                android:contentDescription="Logo" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SYSTEM CONTROLLER"
+                    android:textSize="10sp"
+                    android:textColor="@color/admin_text_secondary"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="App Control"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/admin_text" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_logout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_admin_card"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:tint="@color/admin_text_secondary"
+                android:padding="8dp"
+                android:contentDescription="Logout" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_admin_card"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tab_dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="DASHBOARD"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_teal_card"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/tab_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="USERS"
+                    android:textSize="11sp"
+                    android:textColor="@color/admin_text_secondary"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/tab_tickets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="TICKETS"
+                    android:textSize="11sp"
+                    android:textColor="@color/admin_text_secondary"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/tab_reviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="REVIEWS"
+                    android:textSize="11sp"
+                    android:textColor="@color/admin_text_secondary"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:id="@+id/layout_dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_admin_card"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginEnd="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_monthly_requests"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="—"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/admin_text" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MONTHLY REQUESTS"
+                                android:textSize="9sp"
+                                android:textColor="@color/admin_text_secondary"
+                                android:letterSpacing="0.05" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_admin_card"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_avg_resolution"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="—"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/status_in_progress" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AVG RESOLUTION"
+                                android:textSize="9sp"
+                                android:textColor="@color/admin_text_secondary"
+                                android:letterSpacing="0.05" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LIVE PROGRESS MONITOR"
+                        android:textSize="11sp"
+                        android:textColor="@color/admin_text_secondary"
+                        android:letterSpacing="0.08"
+                        android:layout_marginBottom="12dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/layout_users"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_admin_card"
+                    android:padding="4dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/subtab_students"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Students"
+                        android:textSize="11sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_teal_card"
+                        android:gravity="center"
+                        android:layout_marginEnd="4dp" />
+
+                    <TextView
+                        android:id="@+id/subtab_teachers"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Lecturers"
+                        android:textSize="11sp"
+                        android:textColor="@color/admin_text_secondary"
+                        android:gravity="center"
+                        android:layout_marginEnd="4dp" />
+
+                    <TextView
+                        android:id="@+id/subtab_technicians"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Technicians"
+                        android:textSize="11sp"
+                        android:textColor="@color/admin_text_secondary"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_add_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="+ ADD USER"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:background="@drawable/bg_button_primary"
+                    android:backgroundTint="@null"
+                    android:layout_marginBottom="12dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_users"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_tickets"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="20dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_admin_card"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:id="@+id/ticket_tab_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="ALL"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:background="@drawable/bg_teal_card"
+                            android:gravity="center"
+                            android:paddingHorizontal="14dp"
+                            android:layout_marginEnd="3dp" />
+
+                        <TextView
+                            android:id="@+id/ticket_tab_new"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="NEW"
+                            android:textSize="11sp"
+                            android:textColor="@color/admin_text_secondary"
+                            android:gravity="center"
+                            android:paddingHorizontal="14dp"
+                            android:layout_marginEnd="3dp" />
+
+                        <TextView
+                            android:id="@+id/ticket_tab_inprogress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="IN PROGRESS"
+                            android:textSize="11sp"
+                            android:textColor="@color/admin_text_secondary"
+                            android:gravity="center"
+                            android:paddingHorizontal="14dp"
+                            android:layout_marginEnd="3dp" />
+
+                        <TextView
+                            android:id="@+id/ticket_tab_done"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="DONE"
+                            android:textSize="11sp"
+                            android:textColor="@color/admin_text_secondary"
+                            android:gravity="center"
+                            android:paddingHorizontal="14dp" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_tickets"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_reviews"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SERVICE REVIEWS"
+                    android:textSize="11sp"
+                    android:textColor="@color/admin_text_secondary"
+                    android:letterSpacing="0.08"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_reviews_count"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Reviews: 0"
+                        android:textSize="11sp"
+                        android:textColor="@color/admin_text_secondary" />
+
+                    <TextView
+                        android:id="@+id/tv_reviews_avg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Avg: 0.0"
+                        android:textSize="11sp"
+                        android:textColor="@color/admin_text_secondary" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_review_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/bg_input"
+                    android:hint="Search by technician/comment"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:singleLine="true"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="10dp" />
+
+                <CheckBox
+                    android:id="@+id/cb_reviews_text_only"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Only reviews with text comments"
+                    android:textSize="12sp"
+                    android:textColor="@color/admin_text_secondary"
+                    android:layout_marginBottom="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <Spinner
+                        android:id="@+id/sp_review_rating_filter"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_input" />
+
+                    <Spinner
+                        android:id="@+id/sp_review_sort"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_input" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_reviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/navbar_admin" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

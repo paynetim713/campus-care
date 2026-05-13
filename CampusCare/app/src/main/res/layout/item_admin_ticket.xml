@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_admin_card"
+    android:padding="14dp"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_ticket_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Broken Desk"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/admin_text" />
+
+            <TextView
+                android:id="@+id/tv_ticket_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BLOCK A - ROOM 101"
+                android:textSize="11sp"
+                android:textColor="@color/admin_text_secondary"
+                android:letterSpacing="0.05"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_ticket_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEW"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@color/status_new"
+            android:letterSpacing="0.06" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_assign"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="ASSIGN TECH"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="@color/accent"
+            android:letterSpacing="0.04"
+            android:gravity="center"
+            android:background="@drawable/bg_nav_item_dark"
+            android:layout_marginEnd="8dp" />
+
+        <ImageButton
+            android:id="@+id/btn_details"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_nav_item_dark"
+            android:src="@android:drawable/ic_menu_info_details"
+            android:tint="@color/admin_text_secondary"
+            android:padding="8dp"
+            android:contentDescription="Details" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#3DBFA8</color>
+    <color name="primary_dark">#2EA898</color>
+    <color name="primary_light">#E8F7F5</color>
+    <color name="accent">#3DBFA8</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="background">#F5F5F5</color>
+    <color name="card_bg">#FFFFFF</color>
+
+    <color name="text_primary">#1A1A2E</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_hint">#9CA3AF</color>
+
+    <color name="status_new">#EF4444</color>
+    <color name="status_in_progress">#F59E0B</color>
+    <color name="status_done">#10B981</color>
+
+    <color name="admin_bg">#0F172A</color>
+    <color name="admin_card">#1E293B</color>
+    <color name="admin_card2">#1A2540</color>
+    <color name="admin_text">#E2E8F0</color>
+    <color name="admin_text_secondary">#94A3B8</color>
+
+    <color name="divider">#E5E7EB</color>
+    <color name="input_bg">#F9FAFB</color>
+    <color name="input_border">#E5E7EB</color>
+    <color name="star_color">#F59E0B</color>
+
+    <color name="admin_primary">#185FA5</color>
+    <color name="admin_primary_dark">#0C447C</color>
+    <color name="admin_primary_light">#E6F1FB</color>
+
+    <color name="student_primary">#534AB7</color>
+    <color name="student_primary_dark">#3C3489</color>
+    <color name="student_primary_light">#EEEDFE</color>
+
+    <color name="icon_bg_green">#E1F5EE</color>
+    <color name="icon_bg_blue">#E6F1FB</color>
+    <color name="icon_bg_purple">#EEEDFE</color>
+    <color name="icon_bg_neutral">#F1EFE8</color>
+    <color name="icon_bg_red">#FCEBEB</color>
+
+    <color name="status_error">#E24B4A</color>
+    <color name="status_error_light">#FCEBEB</color>
+    <color name="text_tertiary">#888780</color>
+
+</resources>

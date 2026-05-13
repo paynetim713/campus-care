@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:name=".CampusCareApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="CampusCare"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CampusCare"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.CampusCare.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.MyProfileActivity" />
+        <activity android:name=".activities.LoginActivity" android:exported="false"/>
+        <activity android:name=".activities.RegisterActivity" android:exported="false"/>
+        <activity android:name=".activities.ForgotPasswordActivity" android:exported="false"/>
+
+        <activity android:name=".activities.UserDashboardActivity" android:exported="false"/>
+        <activity android:name=".activities.ReportIssueActivity" android:exported="false"/>
+        <activity android:name=".activities.RepairHistoryActivity" android:exported="false"/>
+        <activity android:name=".activities.LiveTrackingActivity" android:exported="false"/>
+        <activity android:name=".activities.ChatActivity" android:exported="false"/>
+        <activity android:name=".activities.RateServiceActivity" android:exported="false"/>
+        <activity android:name=".activities.NotificationsActivity" android:exported="false"/>
+
+        <activity android:name=".activities.TechJobBoardActivity" android:exported="false"/>
+        <activity android:name=".activities.TechScheduleActivity" android:exported="false"/>
+        <activity android:name=".activities.TechJobDetailActivity" android:exported="false"/>
+        <activity android:name=".activities.TechActiveJobsActivity" android:exported="false"/>
+        <activity android:name=".activities.TechCompletedJobsActivity" android:exported="false"/>
+
+        <activity android:name=".activities.AdminDashboardActivity" android:exported="false"/>
+        <activity android:name=".activities.AdminAddUserActivity" android:exported="false"/>
+        <activity android:name=".activities.AdminChatListActivity" android:exported="false"/>
+
+    </application>
+
+</manifest>

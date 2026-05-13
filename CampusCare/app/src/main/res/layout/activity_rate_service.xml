@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate Service"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your feedback helps us improve campus facilities."
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:id="@+id/tv_rating_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 out of 5 stars"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="32dp"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton android:id="@+id/star1" android:layout_width="44dp" android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/btn_star_big_on"
+                android:contentDescription="Star 1" />
+
+            <ImageButton android:id="@+id/star2" android:layout_width="44dp" android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/btn_star_big_on"
+                android:contentDescription="Star 2" />
+
+            <ImageButton android:id="@+id/star3" android:layout_width="44dp" android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/btn_star_big_on"
+                android:contentDescription="Star 3" />
+
+            <ImageButton android:id="@+id/star4" android:layout_width="44dp" android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/btn_star_big_on"
+                android:contentDescription="Star 4" />
+
+            <ImageButton android:id="@+id/star5" android:layout_width="44dp" android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/btn_star_big_off"
+                android:contentDescription="Star 5" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMMENTS"
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/et_comments"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_input"
+            android:padding="14dp"
+            android:hint="Share your experience with the repair..."
+            android:textColorHint="@color/text_hint"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Submit Review"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/bg_button_primary"
+            android:backgroundTint="@null"
+            android:layout_marginTop="28dp" />
+
+    </LinearLayout>
+</ScrollView>

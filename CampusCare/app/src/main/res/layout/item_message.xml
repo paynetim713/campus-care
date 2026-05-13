@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:id="@+id/ll_received"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:maxWidth="260dp">
+
+        <TextView
+            android:id="@+id/tv_received"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:maxWidth="260dp">
+
+        <TextView
+            android:id="@+id/tv_sent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:background="@drawable/bg_teal_card"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>
