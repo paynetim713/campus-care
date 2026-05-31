@@ -89,13 +89,7 @@ App 内置了一个服务器设置页（`ServerConfigHelper`）
 
 后端把图片存到运行目录下的 `./uploads/`。本地跑没问题，部署的时候要给容器挂一个持久卷上去，不然重启就丢了。
 
-## 一些已知的烂部分
 
-- 后端没有真正的 token 刷新机制，AuthToken 是数据库里查的，简单但不优雅。
-- 密码用的是普通哈希（早期偷懒，没用 bcrypt），下一版会改。
-- Android 端没有抽出 Repository 层，Activity 里直接调 Retrofit，文件比较臃肿。
-- 没有写单元测试。
-- 仓库里有个 `campus-care-backend/campus-care-backend/` 嵌套子目录是 Spring Initializr 残留，下次清掉。
 
 ## 协议
 
